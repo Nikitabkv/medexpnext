@@ -1,0 +1,53 @@
+.swiperWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper {
+  position: relative;
+  display: flex;
+  width: max-content;
+}
+
+.slide {
+  width: 100vw;
+  opacity: 1;
+
+  &.disabled {
+    transition: 1250ms;
+    transform: translateX(100%);
+  }
+
+  &.active {
+    transition: 1250ms;
+    transform: translateX(0);
+  }
+}
+
+.pagination {
+  z-index: 20;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: calc( 50vw - 35px );
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid #009d53;
+    background: #ffffff;
+    opacity: 0.5;
+    transition: 1250ms;
+    cursor: pointer;
+
+    &.active {
+      opacity: 1;
+      transition: 1250ms;
+      background: #009d53;
+    }
+  }
+}

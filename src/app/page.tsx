@@ -1,9 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
+import {Carousel} from "@/app/widgets/Slider/Slider";
 
 export default function Home() {
   return (
     <div className={styles.main}>
+
+      <Carousel/>
 
       <div className={styles.center}>
         <Image
