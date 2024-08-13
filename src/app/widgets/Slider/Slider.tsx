@@ -5,14 +5,14 @@ import Image from "next/image"
 
 const items = ['/full.jpg', '/full1.jpg', '/full2.jpg', '/full3.jpg']
 
-export const Carousel:FC = ({children}: any) => {
+export const Carousel:FC = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1
       setActiveIndex(nextIndex)
-    }, 5000)
+    }, 7500)
     return () => clearInterval(intervalId)
   }, [activeIndex])
 

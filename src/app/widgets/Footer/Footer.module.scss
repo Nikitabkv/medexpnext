@@ -1,0 +1,40 @@
+.footer {
+  padding-top: 35px;
+}
+
+.popupsWrapper {
+  width: 100%;
+  background-color: #F6F6F6FF;
+
+  .popups {
+    height: 109px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .infoPopupButton {
+      display: flex;
+      gap: 16px;
+
+      span {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 300;
+        width: 148px;
+      }
+    }
+  }
+}
+
+.infoWrapper {
+  width: 100%;
+  background-color: #adadad;
+
+  .info {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+}

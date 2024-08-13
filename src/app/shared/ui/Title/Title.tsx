@@ -9,11 +9,12 @@ interface Props {
   imgLink: string
   imgWidth?: number
   imgHeight?: number
+  justifyContent?: string
 }
 
-export const TitleWithIcon: FC<Props> = ({ Tag, text, className, imgLink, imgWidth = 20, imgHeight = 20}) => {
+export const TitleWithIcon: FC<Props> = ({ Tag, text, className, imgLink, imgWidth = 20, imgHeight = 20, justifyContent = 'center'}) => {
   return (
-    <div className={s.row}>
+    <div className={s.row} style={{justifyContent: justifyContent}}>
       <Tag className={className}>
         <span>
           {text}
