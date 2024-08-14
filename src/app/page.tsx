@@ -1,9 +1,9 @@
 import Image from "next/image"
 import s from "./page.module.scss"
-import {Carousel} from "@/app/widgets/Slider/Slider"
-import {TitleWithIcon} from "@/app/shared/ui/Title/Title"
-import {Container} from "@/app/shared/ui/Container/Container";
-import {YaMap} from "@/app/widgets/YaMap/YaMap";
+import {TitleWithIcon} from "@/shared/ui/Title/Title"
+import {Container} from "@/shared/ui/Container/Container"
+import {YaMap} from "@/widgets/YaMap/YaMap"
+import {Carousel} from "@/widgets/Slider/Slider"
 
 export default function Home() {
   return (

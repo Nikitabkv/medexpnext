@@ -1,5 +1,5 @@
 import s from './Footer.module.scss'
-import {Container} from "@/app/shared/ui/Container/Container"
+import {Container} from "@/shared/ui/Container/Container"
 import Image from "next/image";
 
 export const Footer = () => {

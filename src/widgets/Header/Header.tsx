@@ -1,12 +1,12 @@
 import s from "./Header.module.scss"
-import {Container} from "@/app/shared/ui/Container/Container"
+import {Container} from "@/shared/ui/Container/Container"
 import Image from "next/image";
 import Link from "next/link";
 
 const menu = [
   {
     title: 'Главная',
-    href: ''
+    href: '/'
   },
   {
     title: 'Услуги и цены',
@@ -14,7 +14,7 @@ const menu = [
   },
   {
     title: 'Специалисты',
-    href: '',
+    href: '/specialists',
   },
   {
     title: 'Об услугах',
