@@ -3,6 +3,7 @@ import s from "./page.module.scss"
 import {Carousel} from "@/app/widgets/Slider/Slider"
 import {TitleWithIcon} from "@/app/shared/ui/Title/Title"
 import {Container} from "@/app/shared/ui/Container/Container";
+import {YaMap} from "@/app/widgets/YaMap/YaMap";
 
 export default function Home() {
   return (
@@ -76,9 +77,9 @@ export default function Home() {
                        height: 'auto',
                      }}/>
               <div className={s.newsDescription}>
-                <h3>
-                  Полная диагностика организма
-                </h3>
+                <p>
+                  <b>Полная диагностика организма</b>
+                </p>
                 <div className={s.moreNews}>
                   <span>18 апреля 2024</span>
                   <button>Подробнее</button>
@@ -92,9 +93,9 @@ export default function Home() {
                        height: 'auto',
                      }}/>
               <div className={s.newsDescription}>
-                <h3>
-                  Компьютерная томография, Рентгенография
-                </h3>
+                <p>
+                  <b>Компьютерная томография, Рентгенография</b>
+                </p>
                 <div className={s.moreNews}>
                   <span>27 февраля 2024</span>
                   <button>Подробнее</button>
@@ -165,7 +166,7 @@ export default function Home() {
 
       <Container className={s.reviews}>
         <h2>
-          Фотогалерея
+          Отзывы
         </h2>
 
         <div className={s.row}>
@@ -173,7 +174,7 @@ export default function Home() {
             <div className={s.reviewHead}>
               <div>
                 <b>Анна</b>
-                <span>* * * * *</span>
+                <span className={s.stars}>★ ★ ★ ★ ★</span>
               </div>
               <div className={s.date}>
                 <span>09 Августа 2024  19:53</span>
@@ -196,7 +197,7 @@ export default function Home() {
             <div className={s.reviewHead}>
               <div>
                 <b>Анна</b>
-                <span>* * * * *</span>
+                <span className={s.stars}>★ ★ ★ ★ ★</span>
               </div>
               <div className={s.date}>
                 <span>09 Августа 2024  19:53</span>
@@ -216,6 +217,10 @@ export default function Home() {
           </div>
         </div>
       </Container>
+
+      <div style={{paddingTop: 100, width: '100%'}}>
+        <YaMap />
+      </div>
     </div>
   );
 }

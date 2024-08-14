@@ -31,7 +31,7 @@
 
     .underSliderText {
       display: inline-block;
-      width: 158px;
+      width: 170px;
       font-size: 15px;
     }
   }
@@ -162,11 +162,23 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      font-weight: 300;
       box-shadow: 0 3px 8px rgba(213, 213, 213, 0.34);
 
       .reviewHead {
         display: flex;
         justify-content: space-between;
+
+        .stars {
+          padding-left: 16px;
+          color: #009d53;
+        }
+
+        .date {
+          font-size: 14px;
+          font-weight: 100;
+          color: grey;
+        }
       }
 
       button {
