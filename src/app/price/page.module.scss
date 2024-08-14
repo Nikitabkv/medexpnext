@@ -8,7 +8,7 @@
 
 .priceGroups {
   position: sticky;
-  top: 91px;
+  top: 126px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -82,8 +82,9 @@
   .modality {
 
     .modalityHeader {
+      z-index: 10;
       position: sticky;
-      top: 91px;
+      top: 126px;
 
       display: flex;
       padding: 4px 12px;
@@ -111,7 +112,7 @@
 
   .priceGroup {
     position: sticky;
-    top: 131px;
+    top: 167px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +150,7 @@
 
 .dcGroup {
   position: sticky;
-  top: 91px;
+  top: 126px;
   display: flex;
   flex-direction: column;
   gap: 16px;
