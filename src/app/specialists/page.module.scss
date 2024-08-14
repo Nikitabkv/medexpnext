@@ -1,0 +1,20 @@
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 35px 15px;
+}
+
+.searchWrapper {
+  padding: 10px 15px;
+  background-color: #fdfdfd;
+  box-shadow: 0 3px 8px rgba(213, 213, 213, 0.34);
+  display: flex;
+  gap: 16px;
+}
+
+.doctorsWrapper {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
