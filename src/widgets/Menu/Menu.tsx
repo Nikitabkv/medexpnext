@@ -11,7 +11,7 @@ const menu = [
   },
   {
     title: 'Услуги и цены',
-    href: ''
+    href: '/price'
   },
   {
     title: 'Специалисты',
