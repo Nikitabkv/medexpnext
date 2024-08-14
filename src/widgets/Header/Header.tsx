@@ -1,54 +1,12 @@
 import s from "./Header.module.scss"
 import {Container} from "@/shared/ui/Container/Container"
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import {Menu} from "@/widgets/Menu/Menu";
 
-const menu = [
-  {
-    title: 'Главная',
-    href: '/'
-  },
-  {
-    title: 'Услуги и цены',
-    href: ''
-  },
-  {
-    title: 'Специалисты',
-    href: '/specialists',
-  },
-  {
-    title: 'Об услугах',
-    href: '',
-  },
-  {
-    title: 'Наши центры',
-    href: '',
-  },
-  {
-    title: 'Лаборатория',
-    href: '',
-  },
-  {
-    title: 'Вопрос-ответ',
-    href: '/questions',
-  },
-  {
-    title: 'Отзывы',
-    href: '/feedback',
-  },
-  {
-    title: 'Статьи',
-    href: '',
-  },
-  {
-    title: 'Новости и акции',
-    href: '',
-  },
-]
-const activeIndex = 0
 export const Header = () => {
+
   return (
-    <header className={s.header}>
+    <header className={s.header} >
       <Container className={s.container}>
         <div>
           <Image src={'/logo.svg'} alt={'Лого'} width={200} height={20}/>
@@ -63,19 +21,7 @@ export const Header = () => {
         </div>
         <Image src={'/atlas.svg'} alt={'Атлас Пациента'} width={220} height={50}/>
       </Container>
-      <div className={s.menu}>
-        <Container className={s.container}>
-          {menu.map((menu, index) => (
-            <Link
-              className={index === activeIndex ? s.active : ''}
-              href={menu.href}
-              key={menu.title}
-            >
-              {menu.title}
-            </Link>
-          ))}
-        </Container>
-      </div>
+      <Menu />
     </header>
   )
 }

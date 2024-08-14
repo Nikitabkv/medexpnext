@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  gap: 40px;
+}
+
+.menu {
+  text-wrap: nowrap;
+  background-color: #e6e6e6;
+
+  a {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    font-weight: 300;
+    border-bottom: 4px solid transparent;
+
+    &:hover {
+      color: #009d53;
+      border-bottom: 4px solid #009d53;
+    }
+
+    &.active {
+      border-bottom: 4px solid #009d53;
+    }
+  }
+}
