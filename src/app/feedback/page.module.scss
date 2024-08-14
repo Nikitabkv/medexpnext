@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 940px;
+  margin: 35px auto 35px;
+  padding: 0;
+  gap: 40px;
+}
+
+.reviewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 2px 5px 20px 0 hsla(0, 0%, 0%, 0.07);
+  padding: 30px;
+  font-size: 15px;
+  font-weight: 300;
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    padding: 0;
+  }
+
+  .author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+    }
+
+    .stars {
+      color: green;
+      margin-left: 24px;
+      display: flex;
+
+      .sadStars {
+        color: #e5e5e5;
+      }
+    }
+
+    .date {
+      white-space: pre-wrap;
+      font-size: 14px;
+      color: #888;
+    }
+  }
+
+  .review {
+    white-space: pre-wrap;
+  }
+
+  .answer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 30px;
+    color: #888888;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  span {
+    color: #888888;
+  }
+
+  .paginationItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #009d53;
+    border-radius: 8px;
+
+    &.active {
+      color: white;
+      background-color: #009d53;
+    }
+  }
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  box-shadow: 2px 5px 20px 0 hsla(0, 0%, 0%, 0.07);
+  padding: 30px;
+  font-size: 15px;
+  font-weight: 300;
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .phoneEmail {
+      display: flex;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 15px;
+      border: 1px solid #E8E8E8;
+      border-radius: 5px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .radioGroup {
+        display: flex;
+        gap: 8px;
+        label {
+          color: #E5E5E5;
+
+          &:hover {
+            cursor: pointer;
+            color: #009d53;
+          }
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        color: white;
+        background-color: #009d53;
+        font-size: 15px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .phoneEmail {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

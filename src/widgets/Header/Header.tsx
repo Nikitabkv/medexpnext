@@ -34,7 +34,7 @@ const menu = [
   },
   {
     title: 'Отзывы',
-    href: '',
+    href: '/feedback',
   },
   {
     title: 'Статьи',
