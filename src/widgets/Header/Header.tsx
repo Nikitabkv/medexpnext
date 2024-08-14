@@ -30,7 +30,7 @@ const menu = [
   },
   {
     title: 'Вопрос-ответ',
-    href: '',
+    href: '/questions',
   },
   {
     title: 'Отзывы',

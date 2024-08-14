@@ -1,0 +1,36 @@
+.container {
+  max-width: 940px;
+  margin: 35px auto 35px;
+  padding: 25px 25px;
+  box-shadow: 0 3px 8px rgba(213, 213, 213, 0.34);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.questionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #CCCCCC;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .question {
+    display: flex;
+    font-weight: 700;
+    gap: 10px;
+  }
+
+  .answer {
+    display: flex;
+    padding-left: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    gap: 10px;
+  }
+}
