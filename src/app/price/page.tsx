@@ -776,7 +776,12 @@ export default function PricePage() {
         </button>
       </div>
 
-      <div className={s.prices} style={{width: '50%'}}>
+      <div className={s.prices}>
+        <div className={s.searchWrapper}>
+          <div className={s.search}>
+            <input type={'text'} placeholder={'Введите название услуги'} />
+          </div>
+        </div>
         {prices.map((modality) => (
           <div className={s.modality} key={modality.id}>
             <div className={s.modalityHeader}>
