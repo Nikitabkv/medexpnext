@@ -84,7 +84,7 @@
     .modalityHeader {
       z-index: 10;
       position: sticky;
-      top: 126px;
+      top: 91px;
 
       display: flex;
       padding: 4px 12px;
@@ -111,8 +111,6 @@
   }
 
   .priceGroup {
-    position: sticky;
-    top: 167px;
     display: flex;
     align-items: center;
     justify-content: center;
