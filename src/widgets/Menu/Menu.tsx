@@ -19,15 +19,15 @@ const menu = [
   },
   {
     title: 'Об услугах',
-    href: '',
+    href: '/about_services',
   },
   {
     title: 'Наши центры',
-    href: '',
+    href: '/med_points',
   },
   {
     title: 'Лаборатория',
-    href: '',
+    href: '/laboratory',
   },
   {
     title: 'Вопрос-ответ',
@@ -39,11 +39,11 @@ const menu = [
   },
   {
     title: 'Статьи',
-    href: '',
+    href: '/articles',
   },
   {
     title: 'Новости и акции',
-    href: '',
+    href: '/news',
   },
 ]
 
@@ -53,7 +53,7 @@ export const Menu = () => {
   return (
     <div className={s.menu}>
       <Container className={s.container}>
-        {menu.map((menu, index) => (
+        {menu.map((menu) => (
           <Link
             className={pathname === menu.href ? s.active : ''}
             href={menu.href}

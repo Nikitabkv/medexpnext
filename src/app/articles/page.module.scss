@@ -1,0 +1,47 @@
+.container {
+  margin: 35px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1334px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 440px;
+  max-width: 640px;
+  padding: 20px;
+  gap: 16px;
+  box-shadow: 0 3px 8px rgba(213, 213, 213, 0.34);
+
+  .content {
+    position: relative;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 15px;
+      background-color: rgba(36, 36, 36, 0.8);
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 17px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 948px) {
+  .article {
+    max-width: 100%;
+  }
+}
