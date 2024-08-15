@@ -94,3 +94,34 @@
         }
     }
 }
+
+@media (max-width: 980px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .priceGroups {
+        position: unset;
+        padding: 0;
+
+        .header {
+            display: none;
+        }
+
+        .priceGroupItems {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+
+            border-collapse: collapse;
+            .serviceItem {
+                border: 1px solid #f8f8f8;
+                flex-grow: 1;
+                flex-basis: 215px;
+                img {
+                    margin: 8px 0 8px 8px;
+                }
+            }
+        }
+    }
+}
