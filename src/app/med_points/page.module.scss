@@ -1,0 +1,182 @@
+.container {
+    display: flex;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 35px 15px;
+    gap: 28px;
+}
+
+.dcGroup {
+    position: sticky;
+    top: 126px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: fit-content;
+    box-shadow: 2px 5px 20px 0 hsla(0, 0%, 0%, 0.07);
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 300;
+
+    .select {
+        border: 1px solid #CCCCCC;
+        border-radius: 8px;
+        padding: 8px 4px;
+
+        :focus-visible {
+            outline: none;
+        }
+
+        select {
+            width: 100%;
+            border: none;
+            padding-left: 20px;
+            font-size: 14px;
+            height: 20px;
+            font-weight: 300;
+            background: url("/marker.svg") no-repeat;
+            background-size: 16px;
+        }
+    }
+
+    .dcItems {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .dc {
+            .type {
+                color: red;
+                font-weight: 700;
+            }
+            .adress {
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.point {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    gap: 20px;
+
+    .carousel {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .medPointButtonsGroup {
+        display: flex;
+        gap: 16px;
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 300;
+
+            padding: 10px;
+            width: 100%;
+            background: #009d53;
+        }
+    }
+
+    .workingHours {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .services {
+        font-weight: 300;
+        box-shadow: 6px 9px 16px hsla(0, 0%, 0%, 0.07);
+
+        .service {
+            width: 100%;
+            display: flex;
+
+            .serviceIcon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 75px;
+                min-height: 50px;
+                border-right: 1px solid #CCCCCC;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #CCCCCC;
+            }
+
+            &:nth-child(2n) .subService {
+                &:only-child {
+                    background-color: #f8f8f8;
+                }
+            }
+
+            .subServicesWrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .subService {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    &:nth-of-type(2n) {
+                        background-color: #f8f8f8;
+                    }
+
+                    &:nth-of-type(2n - 1) {
+                        &:not(:last-child) {
+                            border-bottom: 1px solid #CCCCCC;
+                        }
+                    }
+
+                    .subServiceName {
+                        padding: 15px 0 15px 15px;
+                        flex-basis: 72%;
+                        border-right: 1px solid #CCCCCC;
+                    }
+                    .subServiceInfo {
+                        padding: 15px 0;
+                        flex-basis: 12%;
+                        height: 100%;
+                        border-right: 1px solid #CCCCCC;
+                        text-align: center;
+                    }
+                    .subServiceTime {
+                        padding: 15px 0;
+                        flex-basis: 16%;
+                        height: 100%;
+                        text-wrap: nowrap;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 979px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .point {
+        max-width: 100%;
+    }
+}

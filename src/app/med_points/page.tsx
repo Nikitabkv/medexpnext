@@ -1,0 +1,269 @@
+import s from './page.module.scss'
+import {Container} from "@/shared/ui/Container/Container"
+import Image from "next/image";
+
+const dcs = [
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Генерала Лизюкова ул., 25',
+  },
+  {
+    id: 2,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Плехановская ул., 53',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Генерала Лизюкова ул., 85',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Ленинский пр., 148',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Героев Стратосферы ул., 1',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, 9 Января ул., 233/35',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Димитрова ул., 131',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Ростовская ул., 58/22',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Ленинский пр., 117',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Кирова ул., 28',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Пушкинская ул., 4',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Писателя Маршака ул., 18а',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Южно-Моравская ул., 30',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'г. Воронеж, Героев Сибиряков ул., 67а',
+  },
+  {
+    id: 1,
+    type: 'ПУНКТ ПРИЁМА АНАЛИЗОВ',
+    address: 'г. Воронеж, Ленинский пр., 30',
+  },
+  {
+    id: 1,
+    type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+    address: 'с. Новая Усмань, Ленина ул., 249',
+  }
+]
+
+const dcInfo = {
+  id: 1,
+  type: 'ДИАГНОСТИЧЕСКИЙ ЦЕНТР',
+  address: 'г. Воронеж, Ленинский пр., 30',
+  workingHours: 'Круглосуточно',
+  carousel: [
+    '/medPoints/img.png',
+  ],
+  services: [
+    {
+      id: 1,
+      name: 'МРТ',
+      icon: '/servicesIcons/mrt.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'Магнитно-резонансная томография (МРТ)',
+          days: 'Ежедневно',
+          time: 'круглосуточно\n',
+        },
+        {
+          id: 2,
+          name: 'Магнитно-резонансная томография (МРТ) с контрастированием',
+          days: 'Ср и Вс',
+          time: 'с 14:00 до 17:00',
+        },
+      ]
+    },
+    {
+      id: 2,
+      name: 'КТ',
+      icon: '/servicesIcons/kt.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'Компьютерная томография (КТ)',
+          days: 'Ежедневно',
+          time: 'круглосуточно',
+        },
+        {
+          id: 2,
+          name: 'Компьютерная томография (КТ) с контрастированием',
+          days: 'Ср и Вс',
+          time: 'с 14:00 до 17:00',
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Рентгенография',
+      icon: '/servicesIcons/xray.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'Рентгенография',
+          days: 'Ежедневно',
+          time: 'с 07:00 до 20:00',
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: 'УЗИ',
+      icon: '/servicesIcons/uzi.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'УЗИ',
+          days: 'Ежедневно',
+          time: 'с 08:00 до 20:00',
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: 'ФД',
+      icon: '/servicesIcons/mrt.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'Функциональная диагностика (ФД)',
+          days: 'Ежедневно',
+          time: 'с 08:00 до 20:00',
+        },
+      ]
+    },
+    {
+      id: 6,
+      name: 'Консультации',
+      icon: '/servicesIcons/consultations.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'Консультации врачей и манипуляции',
+          days: 'Ежедневно',
+          time: 'с 08:00 до 20:00',
+        },
+      ]
+    },
+    {
+      id: 7,
+      name: 'Анализы',
+      icon: '/servicesIcons/laboratory.png',
+      subServices: [
+        {
+          id: 1,
+          name: 'Забор крови и мазков, прием мочи, кала и грудного молока в процедурном кабинете',
+          days: 'Ежедневно',
+          time: 'c 07:00 до 14:00',
+        },
+        {
+          id: 2,
+          name: 'Забор мазков и соскобов врачами-специалистами',
+          days: 'Ежедневно',
+          time: 'с 08:00 до 20:00',
+        }
+      ]
+    }
+  ]
+}
+
+export default function MedPointsPage() {
+  return (
+    <Container className={s.container}>
+      <div className={s.dcGroup}>
+        <div className={s.select}>
+          <select>
+            <option>Воронеж</option>
+            <option>Центр 1</option>
+            <option>Центр 2</option>
+            <option>Центр 3</option>
+          </select>
+        </div>
+        <div className={s.dcItems}>
+          {dcs.map((dc) => (
+            <div key={dc.id} className={s.dc}>
+              <div className={s.type}>{dc.type}</div>
+              <div className={s.adress}>{dc.address}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={s.point}>
+        <div className={s.carousel}>
+          <Image src={dcInfo.carousel[0]} alt={dcInfo.address} width={1920} height={920}/>
+        </div>
+        <div className={s.medPointButtonsGroup}>
+          <button>
+            <Image src={'/buttons/iIcon.svg'} alt={'Инфо'} width={10} height={20} />
+            Данные юридического лица
+          </button>
+          <button>
+            <Image src={'/buttons/calendar.svg'} alt={'Календарь'} width={21} height={20} />
+            График работы мед персонала
+          </button>
+        </div>
+        <span className={s.workingHours}>Режим работы: {dcInfo.workingHours}</span>
+
+        <div className={s.services}>
+          {dcInfo.services.map((el, index) => (
+            <div className={s.service} key={el.id}>
+              <div className={s.serviceIcon}>
+                <Image src={el.icon} alt={'mrt'} width={35} height={35}/>
+              </div>
+              <div className={s.subServicesWrapper}>
+                {el.subServices.map((subService) => (
+                  <div className={s.subService} key={subService.id}>
+                    <div className={s.subServiceName}>{subService.name}</div>
+                    <div className={s.subServiceInfo}>{subService.days}</div>
+                    <div className={s.subServiceTime}>{subService.time}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </Container>
+  )
+}
