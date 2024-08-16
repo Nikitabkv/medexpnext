@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 17px;
+  line-height: 17px;
   gap: 8px;
 }
 
@@ -45,6 +46,11 @@
     width: 100%;
     background-color: white;
     box-shadow: 6px 9px 16px rgba(0, 0, 0, 0.12);
+
+    &.hidden {
+      display: none;
+    }
+
     .container {
       flex-direction: column;
     }

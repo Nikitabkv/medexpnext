@@ -48,7 +48,7 @@ const menu = [
   },
 ]
 
-export const Menu = ({menuIsOpen = true, setMenuIsOpen = (e?: any) => {}}) => {
+export const Menu = ({menuIsOpen = false, setMenuIsOpen = (e?: any) => {}}) => {
   const pathname = usePathname()
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export const Menu = ({menuIsOpen = true, setMenuIsOpen = (e?: any) => {}}) => {
   }, [menuIsOpen])
 
   return (
-    <div className={s.menu} style={{display: menuIsOpen || screen.width > 922 ? 'block' : 'none'}}>
+    <div className={s.menu + ' ' + (menuIsOpen ? '' : s.hidden)}>
       <Container className={s.container}>
         {menu.map((menu) => (
           <Link

@@ -5,6 +5,8 @@
 }
 
 .searchWrapper {
+  position: sticky;
+  top: 88px;
   padding: 10px 15px;
   background-color: #fdfdfd;
   box-shadow: 0 3px 8px rgba(213, 213, 213, 0.34);
@@ -19,10 +21,14 @@
   gap: 16px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 922px) {
   .searchWrapper {
     top: 50px;
-    position: sticky;
+  }
+}
+
+@media (max-width: 680px) {
+  .searchWrapper {
     flex-direction: column;
 
     input {
