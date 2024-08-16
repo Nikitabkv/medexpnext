@@ -53,11 +53,19 @@
 
   .info {
     font-size: 14px;
-    height: 88px;
     display: flex;
+    gap: 24px;
+    padding: 20px 15px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: white;
+
+    .year {
+    }
+
+    .phone {
+    }
 
     .mail {
       display: flex;
@@ -71,6 +79,87 @@
 
     .warning {
       max-width: 470px;
+    }
+
+    .franchise {
+      display: flex;
+      justify-content: center;
+
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        gap: 4px;
+
+        font-size: 15px;
+
+        width: fit-content;
+        padding: 4px 24px;
+        border-radius: 8px;
+        background: linear-gradient( 0deg, rgb(109 109 109) 0%, #777774 35%, #959590 100%);
+        box-shadow: 2px 2px 2px #00000070;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .infoWrapper {
+    .info {
+      .year {
+        flex-basis: 30%;
+      }
+
+      .phone {
+        flex-basis: 25%;
+      }
+
+      .mail {
+        flex-basis: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 678px) {
+  .infoWrapper {
+    .info {
+      .year {
+        flex-basis: 30%;
+      }
+
+      .phone {
+        flex-basis: 30%;
+      }
+
+      .mail {
+        flex-basis: auto;
+      }
+
+      .socialMedia {
+        order: 5;
+      }
+
+      .warning {
+        order: 4;
+      }
+
+      .franchise {
+        order: 6;
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 827px) {
+  .infoWrapper {
+    .info {
+      .franchise {
+        flex-basis: 100%;
+      }
     }
   }
 }
@@ -90,6 +179,39 @@
     gap: 12px;
     .popups {
       justify-content: space-evenly;
+    }
+  }
+  .infoWrapper {
+    .info {
+      gap: 24px;
+      .year {
+        order: 1;
+        flex-basis: 40%;
+      }
+
+      .phone {
+        order: 2;
+        flex-basis: 40%;
+      }
+
+      .mail {
+        order: 3;
+        flex-basis: 40%;
+      }
+
+      .socialMedia {
+        order: 4;
+        flex-basis: 40%;
+      }
+
+      .warning {
+        order: 5;
+      }
+
+      .franchise {
+        order: 6;
+        flex-basis: 100%;
+      }
     }
   }
 }
