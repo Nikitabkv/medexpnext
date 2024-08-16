@@ -3,6 +3,7 @@ import s from "@/widgets/Menu/Menu.module.scss"
 import {Container} from "@/shared/ui/Container/Container"
 import Link from "next/link"
 import {usePathname} from "next/navigation";
+import {useState} from "react";
 
 const menu = [
   {
@@ -47,11 +48,11 @@ const menu = [
   },
 ]
 
-export const Menu = () => {
+export const Menu = ({menuIsOpen = false}) => {
   const pathname = usePathname()
 
   return (
-    <div className={s.menu}>
+    <div className={s.menu} style={{display: menuIsOpen ? 'block' : 'none'}}>
       <Container className={s.container}>
         {menu.map((menu) => (
           <Link
