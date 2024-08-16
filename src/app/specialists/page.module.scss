@@ -18,3 +18,15 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+
+@media (max-width: 680px) {
+  .searchWrapper {
+    top: 50px;
+    position: sticky;
+    flex-direction: column;
+
+    input {
+      width: 100% !important;
+    }
+  }
+}

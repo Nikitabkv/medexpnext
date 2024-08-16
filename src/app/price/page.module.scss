@@ -236,12 +236,22 @@
   }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 922px) {
   .priceGroups {
     display: none;
   }
   .prices {
     width: 90%;
+    .searchWrapper {
+      top: 50px;
+    }
+    .modality {
+      .modalityHeader {
+        z-index: 1;
+        position: sticky;
+        top: 120px;
+      }
+    }
   }
   .dcGroup {
     display: none;
