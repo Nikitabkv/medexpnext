@@ -1,6 +1,7 @@
 import s from './page.module.scss'
 import {Container} from "@/shared/ui/Container/Container"
 import Image from "next/image"
+import {Metadata} from "next";
 
 const services = [
   {
@@ -79,6 +80,11 @@ const service = {
       text: '',
     },
   ]
+}
+
+export const metadata: Metadata = {
+  title: 'Услуги - МедЭксперт',
+  description: 'Услуги - МедЭксперт',
 }
 
 export default function AboutServicesPage() {

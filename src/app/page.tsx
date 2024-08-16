@@ -4,6 +4,12 @@ import {TitleWithIcon} from "@/shared/ui/Title/Title"
 import {Container} from "@/shared/ui/Container/Container"
 import {YaMap} from "@/widgets/YaMap/YaMap"
 import {Carousel} from "@/widgets/Slider/Slider"
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: 'Главная - МедЭксперт',
+  description: 'Главная - МедЭксперт',
+}
 
 export default function Home() {
   return (
