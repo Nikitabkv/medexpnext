@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1334px;
+    margin: 35px auto;
+    padding: 0 15px;
+}
+
+.carousel {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.presentationWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.translationWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.equipmentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .equipment {
+        .equipmentText {
+         text-align: center;
+        }
+    }
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .info {
+        display: flex;
+        gap: 24px;
+        height: 50px;
+
+        span {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .address {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            width: 100%;
+            border: solid green 2px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            color: #fff;
+            background-color: #009f59;
+            width: 100%;
+
+            transition: 150ms;
+
+            &:hover {
+                background-color: #009154;
+            }
+        }
+    }
+}
