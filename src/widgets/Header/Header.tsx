@@ -9,11 +9,11 @@ export const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <header className={s.header} >
+    <header className={s.header}>
       <Container className={s.container}>
         <div className={s.logo}>
-          <div className={s.mobileMenuButton} onClick={() => setMenuIsOpen((prev) => !prev)}>
-            <input className={s.checkbox} type="checkbox" name="" id=""/>
+          <div className={s.mobileMenuButton} onClick={() => setMenuIsOpen(!menuIsOpen)}>
+            <input className={s.checkbox} type="checkbox" name="" id="" checked={menuIsOpen}/>
             <div className={s.hamburgerLines}>
               <span className={s.line + ' ' + s.line1}></span>
               <span className={s.line + ' ' + s.line2}></span>
@@ -41,7 +41,7 @@ export const Header = () => {
           </button>
         </div>
       </Container>
-      <Menu menuIsOpen={menuIsOpen}/>
+      <Menu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen}/>
     </header>
   )
 }

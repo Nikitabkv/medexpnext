@@ -3,7 +3,7 @@ import s from "@/widgets/Menu/Menu.module.scss"
 import {Container} from "@/shared/ui/Container/Container"
 import Link from "next/link"
 import {usePathname} from "next/navigation";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const menu = [
   {
@@ -48,8 +48,33 @@ const menu = [
   },
 ]
 
-export const Menu = ({menuIsOpen = false}) => {
+export const Menu = ({menuIsOpen = false, setMenuIsOpen = (e?: any) => {}}) => {
   const pathname = usePathname()
+
+  useEffect(() => {
+    if (menuIsOpen) {
+      document.body.style.overflow = 'hidden'
+      document.getElementsByTagName('main')[0].style.filter = 'blur(3px)'
+    } else {
+      document.body.style.overflow = 'unset'
+      document.getElementsByTagName('main')[0].style.filter = 'unset'
+    }
+
+    const closeMenu = (e: any) => {
+      if (!e.target.closest('.menu')) {
+        setMenuIsOpen(false)
+      }
+    }
+
+    document.addEventListener('click', closeMenu)
+
+    return () => {
+      document.body.style.overflow = 'unset'
+      document.getElementsByTagName('main')[0].style.filter = 'unset'
+
+      document.removeEventListener('click', closeMenu)
+    }
+  }, [menuIsOpen])
 
   return (
     <div className={s.menu} style={{display: menuIsOpen ? 'block' : 'none'}}>
