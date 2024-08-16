@@ -1,6 +1,7 @@
 import s from './page.module.scss'
 import {Container} from "@/shared/ui/Container/Container"
 import Image from "next/image";
+import {YaMap} from "@/widgets/YaMap/YaMap";
 
 const dcs = [
   {
@@ -203,7 +204,14 @@ const dcInfo = {
         }
       ]
     }
-  ]
+  ],
+  location: {
+    coordinates: [55.751574, 37.573856],
+    busStop: 'Кинотеатр "Мир"',
+    busNumber: ['5а', '27', '41', '90'],
+    trolleybus: ['99'],
+    minibuses: ['37', '38', '47', '49м', '75', '97', '125'],
+  }
 }
 
 export default function MedPointsPage() {
@@ -234,15 +242,16 @@ export default function MedPointsPage() {
         </div>
         <div className={s.medPointButtonsGroup}>
           <button>
-            <Image src={'/buttons/iIcon.svg'} alt={'Инфо'} width={10} height={20} />
+            <Image src={'/buttons/iIcon.svg'} alt={'Инфо'} width={10} height={20}/>
             Данные юридического лица
           </button>
           <button>
-            <Image src={'/buttons/calendar.svg'} alt={'Календарь'} width={21} height={20} />
+            <Image src={'/buttons/calendar.svg'} alt={'Календарь'} width={21} height={20}/>
             График работы мед персонала
           </button>
         </div>
-        <span className={s.workingHours}>Режим работы: {dcInfo.workingHours}</span>
+
+        <h3 className={s.title}>Режим работы: {dcInfo.workingHours}</h3>
 
         <div className={s.services}>
           {dcInfo.services.map((el, index) => (
@@ -263,7 +272,33 @@ export default function MedPointsPage() {
           ))}
         </div>
 
+        <h3 className={s.title}>Схема проезда</h3>
+
+        <div className={s.mapWrapper}>
+          <div className={s.ways}>
+            <div className={s.way}>
+              <div className={s.wayTitle}><Image src={'/infoIcons/busStop.svg'} alt={'Остановка'} width={30} height={20}/>Остановка: </div>
+              {dcInfo.location.busStop && <span>{dcInfo.location.busStop}</span>}
+            </div>
+            <div className={s.way}>
+              <div className={s.subWay}>
+                <div className={s.wayTitle}><Image src={'/infoIcons/bus.svg'} alt={'Автобус'} width={30} height={20}/>Автобусы: </div>
+                {dcInfo.location.busNumber && <span>№ {dcInfo.location.busNumber.join(', ')}</span>}
+              </div>
+              <div className={s.subWay}>
+                <div className={s.wayTitle}>Троллейбусы:</div>
+                {dcInfo.location.trolleybus && <span>№ {dcInfo.location.trolleybus.join(', ')}</span>}
+              </div>
+            </div>
+            <div className={s.way}>
+              <div className={s.wayTitle}><Image src={'/infoIcons/minibus.svg'} alt={'Маршрутное такси'} width={30} height={20} />Маршрутные такси: </div>
+              {dcInfo.location.minibuses && <span>№ {dcInfo.location.minibuses.join(', ')}</span>}
+            </div>
+          </div>
+          <YaMap/>
+        </div>
       </div>
+
     </Container>
   )
 }

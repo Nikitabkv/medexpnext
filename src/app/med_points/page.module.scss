@@ -90,9 +90,9 @@
         }
     }
 
-    .workingHours {
+    .title {
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
     }
 
@@ -146,24 +146,65 @@
                     }
 
                     .subServiceName {
-                        padding: 15px 0 15px 15px;
-                        flex-basis: 72%;
+                        padding: 16px 0 16px 16px;
+                        flex-grow: 1;
                         border-right: 1px solid #CCCCCC;
                     }
                     .subServiceInfo {
-                        padding: 15px 0;
-                        flex-basis: 12%;
+                        padding: 16px 8px;
+                        flex-basis: 130px;
+                        flex-shrink: 0;
                         height: 100%;
                         border-right: 1px solid #CCCCCC;
+                        text-wrap: nowrap;
                         text-align: center;
                     }
                     .subServiceTime {
-                        padding: 15px 0;
-                        flex-basis: 16%;
+                        padding: 16px 8px;
+                        flex-basis: 160px;
+                        flex-shrink: 0;
                         height: 100%;
                         text-wrap: nowrap;
                         text-align: center;
                     }
+                }
+            }
+        }
+    }
+
+    .mapWrapper {
+        box-shadow: 6px 9px 16px hsla(0, 0%, 0%, 0.07);
+
+        .ways {
+            display: flex;
+            padding: 20px 30px;
+            background-color: #f1f1f1;
+            font-size: 15px;
+
+            .way {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                flex-grow: 1;
+                flex-basis: 300px;
+                margin-right: 20px;
+
+                &:not(:last-child) {
+                    border-right: 1px solid #CCCCCC;
+                }
+
+                .subWay {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .wayTitle {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    color: #888;
+                    font-style: italic;
                 }
             }
         }
@@ -174,9 +215,91 @@
 
 @media (max-width: 979px) {
     .container {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .dcGroup {
+        position: static;
+        top: 126px;
+        .dcItems {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+            .dc {
+                box-shadow:
+                        1px 0 0 0 #f8f8f8,
+                        0 1px 0 0 #f8f8f8,
+                        1px 1px 0 0 #f8f8f8,
+                        1px 0 0 0 #f8f8f8 inset,
+                        0 1px 0 0 #f8f8f8 inset;
+                flex-basis: 33%;
+                padding: 6px 12px;
+            }
+        }
     }
     .point {
         max-width: 100%;
+        .mapWrapper {
+            .ways {
+                flex-direction: column;
+                gap: 28px;
+                .way {
+                    flex-basis: auto;
+                    border-right: none !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .dcGroup {
+        .dcItems {
+            .dc {
+                flex-basis: 50%;
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .point {
+    .services {
+    .service {
+        .serviceIcon {
+            max-width: 40px;
+        }
+    .subServicesWrapper {
+    .subService {
+        font-size: 15px;
+        flex-wrap: wrap;
+        height: auto;
+        .subServiceName {
+            flex-basis: 620px;
+            border-right: none;
+            padding: 8px 0 8px 8px;
+        }
+        .subServiceInfo {
+            padding: 0;
+            flex-basis: 90px;
+            height: 20px;
+        }
+        .subServiceTime {
+            padding: 0 0 0 8px;
+            flex-basis: 120px;
+            height: 20px;
+            text-align: left;
+        }
+    }}}}}
+}
+
+@media (max-width: 490px) {
+    .dcGroup {
+        .dcItems {
+            .dc {
+                flex-basis: 100%;
+                padding: 6px 12px;
+            }
+        }
     }
 }
