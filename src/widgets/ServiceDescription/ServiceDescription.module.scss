@@ -1,0 +1,21 @@
+.serviceWrapper {
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .serviceDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+    font-weight: 300;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+}

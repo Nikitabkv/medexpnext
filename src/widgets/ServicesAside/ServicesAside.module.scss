@@ -1,0 +1,106 @@
+.priceGroups {
+  position: sticky;
+  top: 126px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: fit-content;
+  box-shadow: 2px 5px 20px 0 hsla(0, 0%, 0%, 0.07);
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: 300;
+
+  .header {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    height: 38px;
+    gap: 16px;
+
+    button {
+      background-color: transparent;
+    }
+  }
+
+  .priceGroupItems {
+    display: flex;
+    flex-direction: column;
+
+    .serviceItem {
+      padding: 4px 20px;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      &.active {
+        background-color: #e8e8e8;
+      }
+
+      .serviceName {
+        white-space: pre;
+      }
+    }
+  }
+
+  .atlasButton {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    background-color: transparent;
+
+    span {
+      transition: 100ms;
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-radius: 14px;
+
+      color: white;
+      background-color: #009d53;
+    }
+
+    &:hover {
+      span {
+        scale: 1.05;
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .priceGroups {
+    position: unset;
+    padding: 0;
+
+    .header {
+      display: none;
+    }
+
+    .priceGroupItems {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0;
+      gap: 0;
+
+      border-collapse: collapse;
+      .serviceItem {
+        border: 1px solid #f8f8f8;
+        flex-grow: 1;
+        flex-basis: 215px;
+        div {
+          gap: 8px;
+        }
+        img {
+          margin: 8px 0 8px 8px;
+        }
+      }
+    }
+  }
+}

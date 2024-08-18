@@ -1,63 +1,8 @@
-import s from './page.module.scss'
-import {Container} from "@/shared/ui/Container/Container"
-import Image from "next/image"
-import {Metadata} from "next";
-
-const services = [
-  {
-    id: 1,
-    name: 'Магнитно-резонансная\nтомография (МРТ)',
-    icon: '/servicesIcons/mrt.png',
-  },
-  {
-    id: 2,
-    name: 'Компьютерная\nтомография (КТ)',
-    icon: '/servicesIcons/kt.png',
-  },
-  {
-    id: 3,
-    name: 'Рентгенография\n(Рентген)',
-    icon: '/servicesIcons/xray.png',
-  },
-  {
-    id: 4,
-    name: 'Ультразвуковые\nисследования (УЗИ)',
-    icon: '/servicesIcons/uzi.png',
-  },
-  {
-    id: 5,
-    name: 'Функциональная\nдиагностика (ФД)',
-    icon: '/servicesIcons/fd.png',
-  },
-  {
-    id: 6,
-    name: 'Консультации и\nманипуляции',
-    icon: '/servicesIcons/consultations.png',
-  },
-  {
-    id: 7,
-    name: 'Косметология',
-    icon: '/servicesIcons/cosmetology.png',
-  },
-  {
-    id: 8,
-    name: 'Реабилитация',
-    icon: '/servicesIcons/rehabilitation.png',
-  },
-  {
-    id: 9,
-    name: 'Услуги\nдополнительные',
-    icon: '/servicesIcons/additionalServices.png',
-  },
-  {
-    id: 10,
-    name: 'Лабораторная\nдиагностика',
-    icon: '/servicesIcons/laboratory.png',
-  }
-]
+import {Metadata} from "next"
+import {ServiceDescription} from "@/widgets/ServiceDescription/ServiceDescription"
 
 const service = {
-  imgPath: '/aboutServices/img.png',
+  imgPath: '/aboutServices/cosmetology.png',
   description: [
     {
       title: 'Консультации и осмотры.',
@@ -83,43 +28,12 @@ const service = {
 }
 
 export const metadata: Metadata = {
-  title: 'Услуги - МедЭксперт',
-  description: 'Услуги - МедЭксперт',
+  title: 'Косметология - МедЭксперт',
+  description: 'Косметология - МедЭксперт',
 }
 
-export default function AboutServicesPage() {
+export default function CosmetologyPage() {
   return (
-    <Container className={s.container}>
-      <div className={s.priceGroups}>
-        <div className={s.header}>
-          <button>
-            <Image src={'/buttons/burger.svg'} alt={'Меню'} width={35} height={25}/>
-          </button>
-          <div>
-            Виды услуг
-          </div>
-        </div>
-        <div className={s.priceGroupItems}>
-          {services.map((service) => (
-            <div key={service.id} className={s.serviceItem}>
-              <Image src={service.icon} alt={service.name} width={35} height={35}/>
-              <span className={s.serviceName}>{service.name}</span>
-            </div>
-          ))}
-        </div>
-        {/*<button className={s.atlasButton}>*/}
-        {/*  <Image src={'/atlasVertLogo.svg'} alt={'Атлас пациента'} width={50} height={60}/>*/}
-        {/*  <span>Записаться онлайн</span>*/}
-        {/*</button>*/}
-      </div>
-      <div className={s.serviceWrapper}>
-        <Image src={service.imgPath} alt={'Обложка'} width={1000} height={479}/>
-        <div className={s.serviceDescription}>
-          {service.description.map((el, index)=>(
-            <p key={index}><strong>{el.title}</strong> {el.text}</p>
-          ))}
-        </div>
-      </div>
-    </Container>
+      <ServiceDescription service={service} />
   )
 }
