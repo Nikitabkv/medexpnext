@@ -2,7 +2,7 @@
 import React from 'react';
 import { YMaps, Map, Placemark, Clusterer } from '@pbe/react-yandex-maps'
 
-export const YaMap = () => {
+export const YaMap = ({className}: {className?: string}) => {
   const points = [
     [51.674714, 39.184752],
     [51.687758, 39.219317],
@@ -19,7 +19,7 @@ export const YaMap = () => {
 
   return (
     <YMaps>
-      <Map defaultState={defaultState} width={'100%'} height={700}>
+      <Map defaultState={defaultState} width={'100%'} height={700} className={className ? className : ''}>
         {points.map((point, index) => <Placemark key={index} geometry={point} options={{
           iconLayout: "default#image",
           iconImageSize: [25, 25],

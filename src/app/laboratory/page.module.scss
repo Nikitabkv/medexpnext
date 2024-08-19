@@ -36,6 +36,7 @@
 
 .translationWrapper {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
 }
@@ -45,6 +46,11 @@
     flex-wrap: wrap;
 
     .equipment {
+        width: 50%;
+        img {
+            width: 100%;
+            height: auto;
+        }
         .equipmentText {
          text-align: center;
         }
@@ -91,5 +97,30 @@
                 background-color: #009154;
             }
         }
+    }
+    .yaMap {
+        height: 700px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .gallery {
+        justify-content: center;
+        img:not(:last-child) {
+            display: none;
+        }
+    }
+    .map .info {
+        flex-direction: column;
+        height: auto;
+        .address {
+            padding: 15px 20px;
+        }
+        button {
+            padding: 15px 20px;
+        }
+    }
+    .yaMap {
+        height: 400px !important;
     }
 }
