@@ -1,19 +1,23 @@
 "use client"
 import s  from "./Slider.module.scss"
-import {FC, useEffect, useState} from "react"
-import Image from "next/image"
+import {FC, ReactNode, useEffect, useState} from "react"
 
-const items = ['/full.jpg', '/full1.jpg', '/full2.jpg', '/full3.jpg']
+type CarouselProps = {
+  children: Array<ReactNode>,
+  timeout?: number
+}
 
-export const Carousel:FC = () => {
+export const Carousel:FC<CarouselProps> = ({children, timeout = 7500}) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1
-      setActiveIndex(nextIndex)
-    }, 7500)
-    return () => clearInterval(intervalId)
+    if (timeout > 50) {
+      const intervalId = setInterval(() => {
+        const nextIndex = activeIndex === children.length - 1 ? 0 : activeIndex + 1
+        setActiveIndex(nextIndex)
+      }, timeout)
+      return () => clearInterval(intervalId)
+    }
   }, [activeIndex])
 
   const handleClick = (index: number) => {
@@ -22,30 +26,18 @@ export const Carousel:FC = () => {
 
   return (
     <div className={s.swiperWrapper}>
-      <div className={s.swiper}>
-        {items.map((item, index) => (
+      <div className={s.swiper} style={{width: `${children.length * 100}%`}}>
+        {children.map((item, index) => (
           <div
             style={{transform: `translateX(-${activeIndex * 100}%)`}}
             className={`${s.slide} ${activeIndex === index ? s.active : s.disabled}`}
-            key={item}
+            key={index}
           >
-            <Image
-              draggable={false}
-              className={s.image}
-              src={'/mainSlider' + item}
-              alt={item}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-              width={1920}
-              height={800}
-            />
+            {item}
           </div>
         ))}
         <div className={s.pagination}>
-            {items.map((_, index) => (
+            {children.map((_, index) => (
               <div
                 className={`${s.dot} ${activeIndex === index ? s.active : ''}`}
                 key={index}

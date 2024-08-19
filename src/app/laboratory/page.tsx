@@ -2,12 +2,18 @@ import s from './page.module.scss'
 import {Container} from "@/shared/ui/Container/Container"
 import Image from "next/image"
 import {YaMap} from "@/widgets/YaMap/YaMap";
+import {Carousel} from "@/widgets/Slider/Slider";
 
 export default function LaboratoryPage() {
   return (
     <Container className={s.container}>
       <div className={s.carousel}>
-        <Image src={'/mainSlider/full.jpg'} alt={'Лаборатория'} width={1920} height={920}/>
+        <Carousel>
+          <Image draggable={false} src={'/laboratorySlider/full.png'} alt={'full.png'} width={1300} height={623}/>
+          <Image draggable={false} src={'/laboratorySlider/full1.png'} alt={'full.png'} width={1300} height={623}/>
+          <Image draggable={false} src={'/laboratorySlider/full2.png'} alt={'full.png'} width={1300} height={623}/>
+          <Image draggable={false} src={'/laboratorySlider/full3.png'} alt={'full.png'} width={1300} height={623}/>
+        </Carousel>
       </div>
 
       <h2 className={s.title}>Фотогалерея</h2>
@@ -18,18 +24,18 @@ export default function LaboratoryPage() {
         <Image src={'/gallery/img4.png'} alt={'Фото'} width={310} height={278}/>
       </div>
 
-      {/*<div className={s.presentationWrapper}>*/}
-      {/*  <div className={s.presentation}>*/}
-      {/*    <h2 className={s.title}>Презентация лабораторного комплекса</h2>*/}
-      {/*    <Image src={'/laboratory.png'} alt={'placeholder'} width={640} height={370}/>*/}
-      {/*  </div>*/}
-      {/*  <div className={s.presentation}>*/}
-      {/*    <h2 className={s.title}>Лабораторный комплекс online</h2>*/}
-      {/*    <Image width={640} height={370}*/}
-      {/*           src={'https://ipcam2.numedy.com/zm/cgi-bin/nph-zms?scale=%60100%60&mode=single&maxfps=15&monitor=101&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJab25lTWluZGVyIiwiaWF0IjoxNzIzNzk1MTQxLCJleHAiOjE3MjM4MDIzNDEsInVzZXIiOiJtZWRleHNpdGUiLCJ0eXBlIjoiYWNjZXNzIn0.DM2-RwQaBbwE8EiqTEWQyBF7-q7dBjXo9PGzDYNbyug'}*/}
-      {/*           alt={'placeholder'}/>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <div className={s.presentationWrapper}>
+        <div className={s.presentation}>
+          <h2 className={s.title}>Презентация лабораторного комплекса</h2>
+          <Image src={'/laboratory.png'} alt={'placeholder'} width={640} height={370}/>
+        </div>
+        <div className={s.presentation}>
+          <h2 className={s.title}>Лабораторный комплекс online</h2>
+          <Image width={640} height={370}
+                 src={'https://ipcam2.numedy.com/zm/cgi-bin/nph-zms?scale=%60100%60&mode=single&maxfps=15&monitor=101&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJab25lTWluZGVyIiwiaWF0IjoxNzIzNzk1MTQxLCJleHAiOjE3MjM4MDIzNDEsInVzZXIiOiJtZWRleHNpdGUiLCJ0eXBlIjoiYWNjZXNzIn0.DM2-RwQaBbwE8EiqTEWQyBF7-q7dBjXo9PGzDYNbyug'}
+                 alt={'placeholder'}/>
+        </div>
+      </div>
 
       <h2 className={s.title}>Онлайн трансляции</h2>
       <div className={s.translationWrapper}>

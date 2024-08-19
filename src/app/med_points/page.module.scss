@@ -211,6 +211,11 @@
     }
 }
 
+.yaMap {
+    max-width: 100%;
+    height: 600px;
+}
+
 
 
 @media (max-width: 979px) {
@@ -291,6 +296,10 @@
             text-align: left;
         }
     }}}}}
+    .yaMap {
+        max-width: 100%;
+        height: 350px;
+    }
 }
 
 @media (max-width: 490px) {

@@ -2,6 +2,7 @@ import s from './page.module.scss'
 import {Container} from "@/shared/ui/Container/Container"
 import Image from "next/image";
 import {YaMap} from "@/widgets/YaMap/YaMap";
+import {Carousel} from "@/widgets/Slider/Slider";
 
 const dcs = [
   {
@@ -92,7 +93,17 @@ const dcInfo = {
   address: 'г. Воронеж, Ленинский пр., 30',
   workingHours: 'Круглосуточно',
   carousel: [
-    '/medPoints/img.png',
+    '/medPoints/1/img.png',
+    '/medPoints/1/img1.png',
+    '/medPoints/1/img2.png',
+    '/medPoints/1/img3.png',
+    '/medPoints/1/img4.png',
+    '/medPoints/1/img5.png',
+    '/medPoints/1/img6.png',
+    '/medPoints/1/img7.png',
+    '/medPoints/1/img8.png',
+    '/medPoints/1/img9.png',
+    '/medPoints/1/img9.png',
   ],
   services: [
     {
@@ -238,7 +249,11 @@ export default function MedPointsPage() {
 
       <div className={s.point}>
         <div className={s.carousel}>
-          <Image src={dcInfo.carousel[0]} alt={dcInfo.address} width={1920} height={920}/>
+          <Carousel >
+            {dcInfo.carousel.map((img, index) => (
+              <Image src={img} alt={''}  width={1920} height={800} key={index}/>
+            ))}
+          </Carousel>
         </div>
         <div className={s.medPointButtonsGroup}>
           <button>
@@ -295,7 +310,7 @@ export default function MedPointsPage() {
               {dcInfo.location.minibuses && <span>№ {dcInfo.location.minibuses.join(', ')}</span>}
             </div>
           </div>
-          <YaMap/>
+          <YaMap className={s.yaMap}/>
         </div>
       </div>
 

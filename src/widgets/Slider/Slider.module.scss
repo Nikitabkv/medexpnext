@@ -1,16 +1,16 @@
 .swiperWrapper {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .swiper {
-  position: relative;
   display: flex;
   width: max-content;
 }
 
 .slide {
-  width: 100vw;
+  width: 100%;
   opacity: 1;
 
   &.disabled {
@@ -29,7 +29,8 @@
   display: flex;
   position: absolute;
   bottom: 20px;
-  left: calc( 50vw - 35px );
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
   gap: 10px;

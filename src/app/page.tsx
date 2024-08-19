@@ -15,7 +15,36 @@ export default function Home() {
   return (
     <div className={s.main}>
 
-      <Carousel/>
+      <Carousel>
+        <Image draggable={false} src={'/mainSlider/full.jpg'} alt={'full.jpg'} sizes="100vw" style={{
+            width: '100vw',
+            height: 'auto',
+          }}
+          width={1920}
+          height={800}
+        />
+        <Image draggable={false} src={'/mainSlider/full1.jpg'} alt={'full1.jpg'} sizes="100vw" style={{
+            width: '100vw',
+            height: 'auto',
+          }}
+          width={1920}
+          height={800}
+        />
+        <Image draggable={false} src={'/mainSlider/full2.jpg'} alt={'full2.jpg'} sizes="100vw" style={{
+            width: '100vw',
+            height: 'auto',
+          }}
+          width={1920}
+          height={800}
+        />
+        <Image draggable={false} src={'/mainSlider/full3.jpg'} alt={'full3.jpg'} sizes="100vw" style={{
+            width: '100vw',
+            height: 'auto',
+          }}
+          width={1920}
+          height={800}
+        />
+      </Carousel>
       <div className={s.underSliderWrapper}>
         <Container className={s.underSlider}>
           <div className={s.underSliderItem}>
