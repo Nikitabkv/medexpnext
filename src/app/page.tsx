@@ -118,14 +118,14 @@ export default function Home() {
             <TitleWithIcon imgLink={'./link.svg'} className={s.titles} imgWidth={20} imgHeight={20}
                            text={'Презентация компании'} Tag={'h2'}/>
             <div>
-              <iframe src={'https://www.youtube.com/embed/b9rZggYrzCo?rel=0'} height={370} width={'100%'}/>
+              <iframe src={'https://vk.com/video_ext.php?oid=-41341440&id=456239028&hd=2&autoplay=0'} height={370} width={'100%'}/>
             </div>
           </div>
           <div className={s.presentationsItem}>
             <TitleWithIcon imgLink={'./link.svg'} className={s.titles} imgWidth={20} imgHeight={20}
                            text={'Презентация Центра телемедицины'} Tag={'h2'}/>
             <div>
-              <iframe src={'https://www.youtube.com/embed/vEZkpNTtVfU?rel=0'} height={370} width={'100%'}/>
+              <iframe src={'https://vk.com/video_ext.php?oid=-41341440&id=456239027&hd=2&autoplay=0'} height={370} width={'100%'}/>
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function Home() {
             <TitleWithIcon imgLink={'./link.svg'} className={s.titles} imgWidth={20} imgHeight={20}
                            text={'Лабораторный комплекс online'} Tag={'h2'}/>
             <div>
-              <img
+              <img className={s.labCamera}
                 height={370} width={'100%'}
                 src={'https://ipcam2.numedy.com/zm/cgi-bin/nph-zms?scale=%60100%60&mode=' +
                   'single&maxfps=15&monitor=101&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.' +
