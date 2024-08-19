@@ -57,14 +57,20 @@
 }
 
 .lastNews {
-  width: 100%;
   display: flex;
+  justify-content: center;
   gap: 16px;
+  max-width: calc(100vw - 30px);
 
   .newsItem {
     width: 100%;
     max-width: 640px;
     box-shadow: 0 2px 3px rgb(213 213 213);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 
   .newsDescription {
@@ -226,6 +232,15 @@
       }
     }
   }
+  .lastNews .newsDescription {
+    flex-direction: column;
+    gap: 12px;
+    .moreNews {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
 
 @media (max-width: 1140px) {
@@ -251,20 +266,37 @@
       flex-wrap: wrap;
     }
   }
-}
-
-@media (max-width: 764px) {
   .saleCarousel {
     img:nth-child(even) {
       display: none;
     }
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
   .lastNews {
     flex-direction: column;
-    .newsItem {
-      max-width: 100%;
-    }
+    align-items: center;
   }
+}
+
+@media (max-width: 764px) {
+  //.saleCarousel {
+  //  img:nth-child(even) {
+  //    display: none;
+  //  }
+  //  img {
+  //    width: 100% !important;
+  //    height: 100% !important;
+  //  }
+  //}
+  //.lastNews {
+  //  flex-direction: column;
+  //  .newsItem {
+  //    max-width: 100%;
+  //  }
+  //}
   .reviews {
     .row {
       flex-direction: column;

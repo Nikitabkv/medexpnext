@@ -4,10 +4,11 @@ import {FC, ReactNode, useEffect, useState} from "react"
 
 type CarouselProps = {
   children: Array<ReactNode>,
-  timeout?: number
+  timeout?: number,
+  paginationPosition?: 'center' | 'bottom'
 }
 
-export const Carousel:FC<CarouselProps> = ({children, timeout = 7500}) => {
+export const Carousel:FC<CarouselProps> = ({children, timeout = 7500, paginationPosition = 'center'}) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
@@ -36,15 +37,15 @@ export const Carousel:FC<CarouselProps> = ({children, timeout = 7500}) => {
             {item}
           </div>
         ))}
-        <div className={s.pagination}>
-            {children.map((_, index) => (
-              <div
-                className={`${s.dot} ${activeIndex === index ? s.active : ''}`}
-                key={index}
-                onClick={() => handleClick(index)}
-              />
-            ))}
-        </div>
+      </div>
+      <div className={s.pagination + ' ' + s[paginationPosition]}>
+        {children.map((_, index) => (
+          <div
+            className={`${s.dot} ${activeIndex === index ? s.active : ''}`}
+            key={index}
+            onClick={() => handleClick(index)}
+          />
+        ))}
       </div>
     </div>
   )
