@@ -11,7 +11,8 @@
   text-wrap: nowrap;
   background-color: #e6e6e6;
 
-  a {
+  .menuTitle {
+    display: inline-block;
     padding-top: 10px;
     padding-bottom: 7px;
     font-weight: 300;
@@ -46,6 +47,11 @@
     width: 100%;
     background-color: white;
     box-shadow: 6px 9px 16px rgba(0, 0, 0, 0.12);
+
+    a {
+      text-align: center;
+      width: 100%;
+    }
 
     &.hidden {
       display: none;

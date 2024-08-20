@@ -85,7 +85,9 @@ export const Menu = ({menuIsOpen = false, setMenuIsOpen = (e?: any) => {}}) => {
             href={menu.href}
             key={menu.title}
           >
-            {menu.title}
+            <span className={s.menuTitle + ' ' + (pathname === menu.href ? s.active : '')}>
+              {menu.title}
+            </span>
           </Link>
         ))}
       </Container>
