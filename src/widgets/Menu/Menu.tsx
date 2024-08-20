@@ -5,6 +5,11 @@ import Link from "next/link"
 import {usePathname} from "next/navigation";
 import {useEffect, useState} from "react";
 
+type menuItem = {
+  title: string
+  href: string
+}
+
 const menu = [
   {
     title: 'Главная',
@@ -76,16 +81,16 @@ export const Menu = ({menuIsOpen = false, setMenuIsOpen = (e?: any) => {}}) => {
     }
   }, [menuIsOpen])
 
+
   return (
     <div className={s.menu + ' ' + (menuIsOpen ? '' : s.hidden)}>
       <Container className={s.container}>
-        {menu.map((menu) => (
+        {menu.map((menu: menuItem) => (
           <Link
-            className={pathname === menu.href ? s.active : ''}
             href={menu.href}
             key={menu.title}
           >
-            <span className={s.menuTitle + ' ' + (pathname === menu.href ? s.active : '')}>
+            <span className={s.menuTitle + ' ' + (pathname.slice().split('/')[1] === menu.href.slice().split('/')[1] ? s.active : '')}>
               {menu.title}
             </span>
           </Link>
