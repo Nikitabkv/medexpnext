@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google"
 import "./globals.scss"
 import {Header} from "@/widgets/Header/Header"
 import {Footer} from "@/widgets/Footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const roboto = Roboto({
   weight: ["300", "400", "700", "900"],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <Header />
     <main>
       {children}
+      <SpeedInsights />
     </main>
     <Footer/>
     </body>
