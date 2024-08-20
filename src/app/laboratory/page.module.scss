@@ -26,11 +26,20 @@
 .presentationWrapper {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
 
     .presentation {
         display: flex;
         flex-direction: column;
+        max-width: 640px;
+        width: 100%;
         gap: 16px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 360px;
     }
 }
 
@@ -102,12 +111,30 @@
         height: 700px;
     }
 }
+@media (max-width: 1380px) {
+    .presentationWrapper {
+        justify-content: center;
+        .presentation {
+            max-width: 580px;
+        }
+        img {
+            max-height: 326px;
+        }
+    }
+}
 
 @media (max-width: 1279px) {
     .gallery {
         justify-content: center;
         img:not(:last-child) {
             display: none;
+        }
+    }
+    .presentationWrapper {
+        flex-direction: column;
+        align-items: center;
+        .presentation {
+            max-width: 580px;
         }
     }
     .map .info {
@@ -122,5 +149,11 @@
     }
     .yaMap {
         height: 400px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 18px;
     }
 }

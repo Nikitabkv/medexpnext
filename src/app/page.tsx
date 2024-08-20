@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* Новости */}
         <TitleWithIcon imgLink={'./link.svg'} className={s.titles} imgWidth={20} imgHeight={20} text={'Новости'} Tag={'h2'}/>
-        <Carousel paginationPosition={'bottom'} timeout={750000}>
+        {/*<Carousel paginationPosition={'bottom'} timeout={750000}>*/}
           <div className={s.lastNews}>
             <div className={s.newsItem}>
               <Image src={'/mockImages/news1.png'} alt={'news1'} width={1280} height={448} sizes="100vw"/>
@@ -150,33 +150,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={s.lastNews}>
-            <div className={s.newsItem}>
-              <Image src={'/mockImages/news1.png'} alt={'news1'} width={1280} height={448} sizes="100vw"/>
-              <div className={s.newsDescription}>
-                <p>
-                  <b>Полная диагностика организма</b>
-                </p>
-                <div className={s.moreNews}>
-                  <span>18 апреля 2024</span>
-                  <button>Подробнее</button>
-                </div>
-              </div>
-            </div>
-            <div className={s.newsItem}>
-              <Image src={'/mockImages/news2.png'} alt={'news2'} width={1280} height={448} sizes="100vw"/>
-              <div className={s.newsDescription}>
-                <p>
-                  <b>Компьютерная томография, Рентгенография</b>
-                </p>
-                <div className={s.moreNews}>
-                  <span>27 февраля 2024</span>
-                  <button>Подробнее</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Carousel>
+        {/*</Carousel>*/}
       </Container>
 
       <Container className={s.presentations}>

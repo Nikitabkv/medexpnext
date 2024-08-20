@@ -27,11 +27,14 @@ export default function LaboratoryPage() {
       <div className={s.presentationWrapper}>
         <div className={s.presentation}>
           <h2 className={s.title}>Презентация лабораторного комплекса</h2>
-          <Image src={'/laboratory.png'} alt={'placeholder'} width={640} height={370}/>
+          <Image src={'/laboratory.png'} alt={'placeholder'} width={640} height={370}
+                 sizes={'100%'}
+          />
         </div>
         <div className={s.presentation}>
           <h2 className={s.title}>Лабораторный комплекс online</h2>
           <Image width={640} height={370}
+                 sizes={'100%'}
                  src={'https://ipcam2.numedy.com/zm/cgi-bin/nph-zms?scale=%60100%60&mode=single&maxfps=15&monitor=101&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJab25lTWluZGVyIiwiaWF0IjoxNzIzNzk1MTQxLCJleHAiOjE3MjM4MDIzNDEsInVzZXIiOiJtZWRleHNpdGUiLCJ0eXBlIjoiYWNjZXNzIn0.DM2-RwQaBbwE8EiqTEWQyBF7-q7dBjXo9PGzDYNbyug'}
                  alt={'placeholder'}/>
         </div>
