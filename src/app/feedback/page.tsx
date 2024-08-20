@@ -48,7 +48,6 @@ const reviews = [
 
 export default function FeedbackPage() {
   return (
-    <>
       <Container className={s.container}>
         {reviews.map((el) => (
           <div className={s.reviewWrapper} key={el.id}>
@@ -120,6 +119,5 @@ export default function FeedbackPage() {
           </form>
         </div>
       </Container>
-    </>
   )
 }

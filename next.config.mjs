@@ -10,6 +10,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'ipcam3.numedy.com'
             },
+            {
+                protocol: 'https',
+                hostname: 'med-exp.ru'
+            },
         ],
     },
     async redirects() {
