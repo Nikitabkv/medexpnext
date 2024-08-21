@@ -1,22 +1,39 @@
-import s from './InfoModal.module.css'
-import {FC, ReactNode} from "react"
+"use client"
+import s from './InfoModal.module.scss'
+import {ElementRef, FC, ReactNode, useEffect, useRef} from "react"
+import { createPortal } from 'react-dom'
+import {useRouter} from "next/navigation";
 
 type InfoModalProps = {
   title: string
   children: ReactNode
 }
 
-export const InfoModal:FC<InfoModalProps> = ({title, children}) => {
-  return (
+export function InfoModal({title, children}: InfoModalProps) {
+  const router = useRouter();
+  const dialogRef = useRef<ElementRef<'dialog'>>(null);
+
+  useEffect(() => {
+    if (!dialogRef.current?.open) {
+      dialogRef.current?.showModal();
+    }
+  }, []);
+
+  function onDismiss() {
+    router.back();
+  }
+
+  return createPortal(
     <div className={s.modalLayout}>
-      <div className={s.modal}>
+      <dialog ref={dialogRef} className={s.modal} onClose={onDismiss}>
         <h3 className={s.title}>
           {title}
         </h3>
         <div className={s.content}>
           {children}
         </div>
-      </div>
-    </div>
+      </dialog>
+    </div>,
+    document.getElementById('modal-root')!
   )
 }
