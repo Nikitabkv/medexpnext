@@ -1,0 +1,33 @@
+{
+  "/documents/company-contract.pdf": [
+    {
+      "src": "/documents/previews/company-contract-1.webp",
+      "width": 1131,
+      "height": 1600
+    },
+    {
+      "src": "/documents/previews/company-contract-2.webp",
+      "width": 1131,
+      "height": 1600
+    },
+    {
+      "src": "/documents/previews/company-contract-3.webp",
+      "width": 1131,
+      "height": 1600
+    }
+  ],
+  "/documents/company-privacy.pdf": [
+    {
+      "src": "/documents/previews/company-privacy-1.webp",
+      "width": 1131,
+      "height": 1600
+    }
+  ],
+  "/documents/human-rights-policy.pdf": [
+    {
+      "src": "/documents/previews/human-rights-policy-1.webp",
+      "width": 1131,
+      "height": 1600
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+export const navigation = [['/', 'Главная'], ['/price', 'Услуги и цены'], ['/specialists', 'Специалисты'], ['/about_services', 'Об услугах'], ['/med_points', 'Наши центры'], ['/laboratory', 'Лаборатория'], ['/questions', 'Вопрос-ответ'], ['/feedback', 'Отзывы'], ['/articles', 'Статьи'], ['/news', 'Новости и акции']]

@@ -1,27 +1,50 @@
 {
-  "name": "medexpnext",
+  "name": "med-expert-mvp",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.22.1" },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 127.0.0.1 --port 3100",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node scripts/start-production.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:integration": "node --import tsx --test --test-concurrency=1 --test-force-exit tests/integration/*.test.ts",
+    "setup:local": "node scripts/setup-local.mjs",
+    "db:local": "node scripts/postgres-local.mjs",
+    "seed": "tsx scripts/seed.ts",
+    "generate:types": "node scripts/payload-cli.mjs generate:types",
+    "generate:importmap": "node scripts/payload-cli.mjs generate:importmap",
+    "migrate:create": "node scripts/payload-cli.mjs migrate:create",
+    "migrate": "node scripts/payload-cli.mjs migrate",
+    "verify:migrations": "node scripts/verify-migrations.mjs",
+    "admin:create": "tsx scripts/create-admin.ts"
   },
   "dependencies": {
-    "@pbe/react-yandex-maps": "^1.2.5",
-    "@vercel/speed-insights": "^1.0.12",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.77.8"
+    "@payloadcms/db-postgres": "3.92.1",
+    "@payloadcms/next": "3.92.1",
+    "@payloadcms/translations": "3.92.1",
+    "graphql": "16.14.2",
+    "next": "16.4.3",
+    "payload": "3.92.1",
+    "pg": "^8.16.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "typescript": "^5"
+    "@types/node": "^26.6.2",
+    "@types/pg": "^8.15.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.2.7",
+    "embedded-postgres": "18.4.0-beta.17",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "dompurify": "3.4.17",
+    "esbuild": "^0.25.12"
   }
 }

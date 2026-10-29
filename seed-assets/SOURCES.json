@@ -1,0 +1,35 @@
+{
+  "purpose": "Local demonstration for med-exp.ru; confirm permission and accuracy with the company before external use.",
+  "retrieved": "2026-10-28",
+  "logo": "https://med-exp.ru/img/logo.svg",
+  "reception": "https://med-exp.ru/img/med_points/p1/slider/1.jpg",
+  "laboratory": "https://med-exp.ru/img/med_points/p1/slider/2.jpg",
+  "mriRoom": "https://med-exp.ru/img/services_icons/images/p1/slider/1.jpg",
+  "doctors": {
+    "sarycheva": "https://med-exp.ru/docs/doc_1/vrach.jpg",
+    "sedenkov": "https://med-exp.ru/docs/doc_895/vrach.jpg",
+    "naumova": "https://med-exp.ru/docs/doc_73/vrach.jpg",
+    "serezhenko": "https://med-exp.ru/docs/doc_2/vrach.jpg",
+    "timoshenko": "https://med-exp.ru/docs/doc_9/vrach.jpg",
+    "bragina": "https://med-exp.ru/docs/doc_361/vrach.jpg",
+    "belkina": "https://med-exp.ru/docs/doc_680/vrach.jpg"
+  },
+  "notes": "Demo Belgorod prices are synthetic to demonstrate city scoping; reviews are explicitly marked demo. No real diplomas, patient documents or research results are included.",
+  "updated": "2026-10-29",
+  "font": {
+    "source": "https://github.com/google/fonts/tree/main/ofl/roboto",
+    "license": "src/fonts/OFL.txt"
+  },
+  "videos": {
+    "company": "https://rutube.ru/video/030147f2cf5b9429a38d59e789e3f83f/",
+    "telemedicine": "https://rutube.ru/video/7f8cd49eb2411cc6737b05cf9f900dda/",
+    "laboratory": "https://rutube.ru/video/cd7fb3308b1761469d68103eb7ff8fcc/"
+  },
+  "publicDocuments": {
+    "source": "https://med-exp.ru/js/modals.js",
+    "contract": "https://drive.google.com/file/d/1ry7goVyDsWd53Y1TlvbjD_ke5F5F0o2J/view",
+    "privacy": "https://drive.google.com/file/d/1m_EYkfpMZCVBDJA0P0BG38PHRx_0aw2A/view",
+    "humanRights": "https://drive.google.com/file/d/1EOhCxZ_JXf9V991CO0B6W5UoHSymwrEp/view",
+    "note": "Original PDFs are unchanged; static page previews are rendered for the local modal viewer."
+  }
+}
